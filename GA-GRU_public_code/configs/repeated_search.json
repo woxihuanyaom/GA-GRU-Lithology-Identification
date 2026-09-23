@@ -1,0 +1,218 @@
+{
+  "features": [
+    "MSFL",
+    "LLS",
+    "LLD",
+    "DEN",
+    "DT",
+    "GR",
+    "NPHI"
+  ],
+  "window_length": 9,
+  "representation": "engineered",
+  "imbalance_strategy": "smote_tomek",
+  "split_seed": 20260917,
+  "batch_size": 512,
+  "maximum_epochs": 60,
+  "early_stopping_patience": 8,
+  "methods": [
+    "genetic_algorithm",
+    "random_search",
+    "tpe"
+  ],
+  "candidate_budget_per_method_per_repeat": 24,
+  "shared_initial_candidates_per_repeat": 6,
+  "search_space": {
+    "hidden_sizes": [
+      64,
+      80,
+      96,
+      112,
+      128,
+      144,
+      160
+    ],
+    "num_layers": [
+      1,
+      2,
+      3
+    ],
+    "learning_rate_min": 0.0003,
+    "learning_rate_max": 0.004,
+    "dropout_values": [
+      0.0,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "weight_decay_min": 1e-06,
+    "weight_decay_max": 0.0003,
+    "force_zero_dropout_for_one_layer": true
+  },
+  "ga": {
+    "population_size": 6,
+    "tournament_size": 3,
+    "crossover_probability": 0.8,
+    "per_gene_mutation_probability": 0.2,
+    "elites": 2
+  },
+  "tpe": {
+    "startup_candidates": 6
+  },
+  "repeats": [
+    {
+      "repeat_id": 1,
+      "base_search_seed": 17,
+      "shared_initial_generation_seed": 1000017,
+      "method_search_seed": 17,
+      "shared_initial_candidates": [
+        {
+          "hidden_size": 80,
+          "num_layers": 1,
+          "learning_rate": 0.002400960488397778,
+          "dropout": 0.0,
+          "weight_decay": 2.468013416579542e-06
+        },
+        {
+          "hidden_size": 144,
+          "num_layers": 1,
+          "learning_rate": 0.00031805118767538757,
+          "dropout": 0.0,
+          "weight_decay": 9.333399941079884e-06
+        },
+        {
+          "hidden_size": 144,
+          "num_layers": 1,
+          "learning_rate": 0.0032636670319291863,
+          "dropout": 0.0,
+          "weight_decay": 0.00010508870495020515
+        },
+        {
+          "hidden_size": 160,
+          "num_layers": 3,
+          "learning_rate": 0.0006184448648589744,
+          "dropout": 0.0,
+          "weight_decay": 3.7318856021388608e-06
+        },
+        {
+          "hidden_size": 128,
+          "num_layers": 1,
+          "learning_rate": 0.0009350430026199212,
+          "dropout": 0.0,
+          "weight_decay": 0.00011801584941129767
+        },
+        {
+          "hidden_size": 160,
+          "num_layers": 3,
+          "learning_rate": 0.002024416575696455,
+          "dropout": 0.3,
+          "weight_decay": 3.1502705646571554e-06
+        }
+      ]
+    },
+    {
+      "repeat_id": 2,
+      "base_search_seed": 29,
+      "shared_initial_generation_seed": 1000029,
+      "method_search_seed": 29,
+      "shared_initial_candidates": [
+        {
+          "hidden_size": 96,
+          "num_layers": 2,
+          "learning_rate": 0.0019253105167523264,
+          "dropout": 0.3,
+          "weight_decay": 3.0559508371852884e-05
+        },
+        {
+          "hidden_size": 80,
+          "num_layers": 3,
+          "learning_rate": 0.0004133622671696751,
+          "dropout": 0.2,
+          "weight_decay": 3.949724369292045e-05
+        },
+        {
+          "hidden_size": 112,
+          "num_layers": 2,
+          "learning_rate": 0.0007805818665596503,
+          "dropout": 0.2,
+          "weight_decay": 1.1649409630974255e-05
+        },
+        {
+          "hidden_size": 112,
+          "num_layers": 1,
+          "learning_rate": 0.0005782388695336958,
+          "dropout": 0.0,
+          "weight_decay": 8.935262098824698e-06
+        },
+        {
+          "hidden_size": 112,
+          "num_layers": 2,
+          "learning_rate": 0.0008829740408125863,
+          "dropout": 0.3,
+          "weight_decay": 4.737839069397583e-06
+        },
+        {
+          "hidden_size": 96,
+          "num_layers": 2,
+          "learning_rate": 0.0032452670499382302,
+          "dropout": 0.2,
+          "weight_decay": 9.843927999058059e-05
+        }
+      ]
+    },
+    {
+      "repeat_id": 3,
+      "base_search_seed": 43,
+      "shared_initial_generation_seed": 1000043,
+      "method_search_seed": 43,
+      "shared_initial_candidates": [
+        {
+          "hidden_size": 64,
+          "num_layers": 2,
+          "learning_rate": 0.0004700207059204309,
+          "dropout": 0.2,
+          "weight_decay": 2.1787163936418893e-05
+        },
+        {
+          "hidden_size": 112,
+          "num_layers": 1,
+          "learning_rate": 0.0005144930009767907,
+          "dropout": 0.0,
+          "weight_decay": 5.323940609502387e-05
+        },
+        {
+          "hidden_size": 112,
+          "num_layers": 1,
+          "learning_rate": 0.0006619690513659524,
+          "dropout": 0.0,
+          "weight_decay": 5.2703976848835155e-06
+        },
+        {
+          "hidden_size": 96,
+          "num_layers": 3,
+          "learning_rate": 0.0005571843025284571,
+          "dropout": 0.0,
+          "weight_decay": 4.254354892140708e-06
+        },
+        {
+          "hidden_size": 80,
+          "num_layers": 3,
+          "learning_rate": 0.0011062788160918148,
+          "dropout": 0.1,
+          "weight_decay": 1.4072955238201187e-06
+        },
+        {
+          "hidden_size": 160,
+          "num_layers": 2,
+          "learning_rate": 0.002138373224902735,
+          "dropout": 0.2,
+          "weight_decay": 0.00010859861447467384
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection_metric": "mean per-well validation macro-F1",
+  "training_seed_base": 1701,
+  "balance_seed_base": 27101
+}

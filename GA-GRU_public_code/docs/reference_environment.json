@@ -1,0 +1,29 @@
+{
+  "python_version": "3.12.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "logical_cpu_count": 16,
+  "torch_version": "2.5.1",
+  "torch_cuda_version": "12.4",
+  "cudnn_version": 90100,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "compute_capability": [
+      8,
+      6
+    ],
+    "total_memory_bytes": 4294443008,
+    "multiprocessor_count": 20
+  },
+  "critical_distributions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.1",
+    "torch": "2.5.1",
+    "optuna": "4.5.0",
+    "spyder-kernels": "3.1.2",
+    "pytest": "7.4.4",
+    "imbalanced-learn": "0.12.3"
+  }
+}

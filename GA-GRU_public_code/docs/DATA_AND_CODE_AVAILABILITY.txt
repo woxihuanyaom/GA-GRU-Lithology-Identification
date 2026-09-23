@@ -1,0 +1,13 @@
+DATA AND CODE AVAILABILITY
+
+English wording for use after the repository is publicly accessible:
+
+The well-log measurements and lithology labels used in this study are proprietary data provided by the oilfield institute and are not publicly available. Requests for access may be directed to the responsible oilfield authority and are subject to its approval. The source code for the GA-GRU workflow, including preprocessing, model training, hyperparameter optimization, and evaluation, is available at [PUBLIC REPOSITORY URL]. The repository includes the experiment configurations and a synthetic example; the proprietary datasets are not distributed with the code.
+
+数据与代码可用性
+
+仓库公开后使用的中文对应表述：
+
+本研究使用的测井测量数据和岩性标签由油田研究机构提供，属于专有数据，不对外公开。数据访问申请可向负责该数据的油田主管机构提出，是否获准访问由该机构审批。GA-GRU工作流程的源代码，包括预处理、模型训练、超参数优化及评价代码，公开于[实际公开仓库地址]。仓库同时提供实验配置和合成示例，不包含上述专有数据集。
+
+作者使用说明：目前仓库尚未创建，以上为待补入真实地址的文本，不表示代码已经在线公开。仓库创建并确认可公开访问后，替换方括号占位符；如已确定机构正式名称和申请渠道，可进一步补充。建议同时固定公开版本号或提交标识，以便论文引用与代码对应。

@@ -1,0 +1,150 @@
+{
+  "models": [
+    {
+      "model_id": "ga_gru",
+      "display_name": "GA-GRU",
+      "family": "recurrent_neural_network",
+      "architecture": "gru",
+      "candidate": {
+        "hidden_size": 128,
+        "num_layers": 3,
+        "learning_rate": 0.0029380455401443366,
+        "dropout": 0.2,
+        "weight_decay": 6.532858135218046e-05
+      },
+      "candidate_source": "equal-budget GA validation winner"
+    },
+    {
+      "model_id": "random_search_gru",
+      "display_name": "Random-search GRU",
+      "family": "recurrent_neural_network",
+      "architecture": "gru",
+      "candidate": {
+        "hidden_size": 160,
+        "num_layers": 2,
+        "learning_rate": 0.003923735623053196,
+        "dropout": 0.0,
+        "weight_decay": 0.0002541634753959563
+      },
+      "candidate_source": "equal-budget random-search validation winner"
+    },
+    {
+      "model_id": "tpe_gru",
+      "display_name": "TPE-GRU",
+      "family": "recurrent_neural_network",
+      "architecture": "gru",
+      "candidate": {
+        "hidden_size": 112,
+        "num_layers": 2,
+        "learning_rate": 0.00373763958152447,
+        "dropout": 0.2,
+        "weight_decay": 5.7461842087573396e-05
+      },
+      "candidate_source": "equal-budget TPE validation winner"
+    },
+    {
+      "model_id": "fixed_gru",
+      "display_name": "Fixed GRU",
+      "family": "recurrent_neural_network",
+      "architecture": "gru",
+      "candidate": {
+        "hidden_size": 96,
+        "num_layers": 2,
+        "learning_rate": 0.0007,
+        "dropout": 0.2,
+        "weight_decay": 0.0001
+      },
+      "candidate_source": "pre-registered default configuration"
+    },
+    {
+      "model_id": "tuned_rnn",
+      "display_name": "Tuned RNN",
+      "family": "recurrent_neural_network",
+      "architecture": "vanilla_rnn",
+      "candidate": {
+        "hidden_size": 128,
+        "num_layers": 3,
+        "learning_rate": 0.0029380455401443366,
+        "dropout": 0.3,
+        "weight_decay": 6.532858135218046e-05
+      },
+      "candidate_source": "validation-only recurrent baseline screen"
+    },
+    {
+      "model_id": "tuned_lstm",
+      "display_name": "Tuned LSTM",
+      "family": "recurrent_neural_network",
+      "architecture": "lstm",
+      "candidate": {
+        "hidden_size": 112,
+        "num_layers": 3,
+        "learning_rate": 0.003950645327404123,
+        "dropout": 0.2,
+        "weight_decay": 0.00020075495113401604
+      },
+      "candidate_source": "validation-only recurrent baseline screen"
+    },
+    {
+      "model_id": "extra_trees",
+      "display_name": "ExtraTrees",
+      "family": "classical_machine_learning",
+      "architecture": "ExtraTreesClassifier",
+      "parameters": {
+        "n_estimators": 500,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "class_weight": null,
+        "n_jobs": -1
+      },
+      "parameter_source": "frozen initial random-center validation screen"
+    }
+  ],
+  "split_seeds": [
+    20260917,
+    20260918,
+    20260919
+  ],
+  "training_seeds": [
+    17,
+    29,
+    43
+  ],
+  "features": [
+    "MSFL",
+    "LLS",
+    "LLD",
+    "DEN",
+    "DT",
+    "GR",
+    "NPHI"
+  ],
+  "representation": "engineered",
+  "input_channels": 17,
+  "imbalance_strategy": "smote_tomek",
+  "window_length": 9,
+  "split_fractions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "batch_size": 512,
+  "maximum_selection_epochs": 60,
+  "selection_patience": 8,
+  "statistical_plan": {
+    "descriptive": "mean and standard deviation over six per-well means, where each well mean averages its nine split/training-seed repeats",
+    "paired_unit": "well; average the nine repeats within each well before comparison",
+    "test": "two-sided paired Wilcoxon signed-rank",
+    "multiplicity": "Holm correction across all GA-versus-baseline tests",
+    "confidence_interval": "95% well-cluster bootstrap interval for the mean paired gain, 10000 resamples, seed 81017",
+    "primary_metrics": [
+      "macro_f1",
+      "accuracy"
+    ]
+  },
+  "schema_version": 1,
+  "application": "within-well random-center interpolation",
+  "minimum_class_rows": 40,
+  "minimum_class_intervals": 5,
+  "sampling_interval_m": 0.125,
+  "configuration_provenance": "Fourth-manuscript main experiment; selected configurations reused without re-search."
+}

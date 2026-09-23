@@ -1,0 +1,8 @@
+# Tested reference versions. Python 3.12 is recommended.
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+scikit-learn==1.5.1
+imbalanced-learn==0.12.3
+torch==2.5.1
+optuna==4.5.0

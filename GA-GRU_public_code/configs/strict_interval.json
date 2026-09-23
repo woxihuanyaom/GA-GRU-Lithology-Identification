@@ -1,0 +1,24 @@
+{
+  "window_length": 9,
+  "sampling_interval_m": 0.125,
+  "purge_each_side_m": 1.0,
+  "fractions": {
+    "train": 0.64,
+    "validation": 0.16,
+    "test": 0.2
+  },
+  "split_seeds": [
+    20260917,
+    20260918,
+    20260919
+  ],
+  "main_well_trials": 32768,
+  "replication_well_trials": 4096,
+  "configuration_policy": "Reuse main-study model configurations; no new strict-split tuning.",
+  "entry_points": [
+    "94_freeze_strict_interval_protocol.py",
+    "97_freeze_strict_evaluation_plan.py",
+    "98_run_strict_repeated_evaluation.py",
+    "99_analyze_strict_evaluation.py"
+  ]
+}
